@@ -1,0 +1,99 @@
+/* =========================================================
+   PRAJA VAARTHALU - Responsive rules
+   Desktop: 3 columns | Tablet (<=1099px): 2 columns | Mobile (<=720px): 1 column
+   ========================================================= */
+
+/* mobile bottom navigation (hidden on desktop) */
+.bottom-nav{display:none}
+.bn-item{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.68rem;font-weight:600;color:var(--muted);background:none;border:0;flex:1;padding:8px 0;gap:2px}
+.bn-item.on,.bn-item:hover{color:var(--red)}
+.bn-item svg{width:20px;height:20px}
+
+@media (max-width:1099px){
+  .home-grid{grid-template-columns:1fr 1fr}
+  .col-center{grid-column:1/-1;order:1}
+  .col-left{order:2}
+  .col-right{order:3}
+  .sub-grid{grid-template-columns:1fr 1fr}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .article-layout{grid-template-columns:1fr}
+  .article-side{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media (max-width:900px){
+  .hamburger{display:block}
+  #navList{display:none;position:absolute;left:0;right:0;top:100%;background:var(--card);flex-direction:column;overflow-y:auto;max-height:72vh;border-bottom:3px solid var(--red);box-shadow:var(--shadow);z-index:90}
+  .mainnav.open #navList{display:flex}
+  .nav-row{position:relative;padding:0 12px}
+  .nl{padding:13px 8px;border-bottom:1px solid var(--line);margin-bottom:0;font-size:.95rem}
+  .nl:hover,.nl.active{border-bottom-color:var(--line)}
+  .nl.active{color:var(--red);font-weight:800;border-left:3px solid var(--red)}
+  #navList>li{flex:none;width:100%}
+  .mega{position:static;display:none;min-width:0;box-shadow:none;border:0;border-top:0;grid-template-columns:1fr;padding:0 0 8px 14px;background:var(--bg-soft)}
+  .mega-head{display:none}
+  .has-mega.open>.mega{display:grid}
+  .mega a{padding:9px 6px}
+  .masthead .container{grid-template-columns:1fr auto;gap:12px}
+  .mast-actions{grid-column:1/-1;justify-content:center;order:3}
+  .logo{order:1}
+  .mast-center{order:2;text-align:right}
+  .mast-te{font-size:2rem}
+  .mast-en{font-size:.74rem;letter-spacing:.24em}
+  .mast-tag{display:none}
+  .ep-layout{grid-template-columns:1fr}
+  .ep-side{border-right:0;padding-right:0;display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+  .ep-side h3{grid-column:1/-1}
+  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--line);z-index:85;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+  body{padding-bottom:62px}
+  .to-top{bottom:78px}
+  .toast{bottom:80px}
+}
+
+@media (max-width:720px){
+  html{font-size:calc(15px * var(--fs))}
+  .topbar .social{display:none}
+  .topbar .group:first-child span:last-child{display:none}
+  .home-grid{grid-template-columns:1fr;padding:16px 12px;gap:18px}
+  .col-center,.col-left,.col-right{grid-column:auto}
+  .col-center{order:1}
+  .col-left{order:2}
+  .col-right{order:3}
+  .lead h2{font-size:1.6rem}
+  .sub-grid,.card-grid{grid-template-columns:1fr}
+  .cat-body{grid-template-columns:1fr;gap:12px}
+  .cat-feature .card{grid-template-columns:1fr}
+  .article-side{grid-template-columns:1fr}
+  .a-title{font-size:1.7rem}
+  .a-body p{font-size:1.02rem}
+  .form-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .ep-page .ep-lead,.ep-page .ep-list{grid-template-columns:1fr}
+  .ep-page{padding:16px}
+  .ep-viewer{padding:10px}
+  .container{padding:0 12px}
+  .mini{grid-template-columns:92px minmax(0,1fr);gap:10px}
+  .mini img{width:92px;height:68px}
+  .filters label{min-width:0;width:100%}
+  .reporter{flex-direction:column;align-items:flex-start}
+  .mast-te{font-size:1.7rem}
+  .masthead .container{grid-template-columns:auto 1fr}
+  .logo svg{width:48px;height:48px}
+  .mega{min-width:0}
+  .ticker .container{gap:6px}
+  .tk-label{font-size:.66rem;padding:5px 7px}
+  .tk-item{font-size:.84rem}
+  .tk-ctrl button{width:26px;height:26px}
+  .ep-toolbar{font-size:.85rem}
+}
+
+@media (max-width:420px){
+  .lang-select{height:36px;font-size:.82rem;padding:0 6px}
+  .icon-btn{width:36px;height:36px}
+  .mast-en{letter-spacing:.14em;font-size:.66rem}
+  .ticker .container{height:40px}
+  .tk-ctrl{display:none}
+}

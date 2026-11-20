@@ -1,0 +1,9 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependency and log folders (not used by this project, kept for safety)
+node_modules/
+*.log
